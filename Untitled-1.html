@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      height: 1500px; /* To create enough scrollable content */
+    }
+
+    #scrollValue {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .hidden {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .visible {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    .new{
+        display: inline;
+        padding: 5px 10px;
+        background-color: lightgreen;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+    .pricing{
+      text-decoration: strikethrough;
+      text-decoration-color: aqua;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="elementToToggle" class="hidden">
+    This is the element to toggle.
+  </div>
+
+  <div id="scrollValue" class="visible">Scroll Top: <span id="scrollPosition">0</span></div>
+
+  <script>
+    var elementToToggle = document.getElementById('elementToToggle');
+    var elementToToggle = document.getElementById('elementToToggle1')
+    var scrollValueElement = document.getElementById('scrollPosition');
+
+    // Update the scroll top value initially
+    updateScrollValue();
+
+    // Set up the event handler for scroll
+    window.onscroll = function() {
+      updateScrollValue();
+
+      // Adjust the scroll threshold as needed
+      if (window.pageYOffset >= 1800 && window.pageYOffset <= 2571) {
+        elementToToggle.classList.remove('hidden');
+        elementToToggle.classList.add('visible');
+      } else {
+        elementToToggle.classList.remove('visible');
+        elementToToggle.classList.add('hidden');
+      }
+      if (window.pageYOffset >= 2571 && window.pageYOffset <= 3300) {
+        elementToToggle1.classList.remove('hidden');
+        elementToToggle1.classList.add('visible');
+      } else {
+        elementToToggle1.classList.remove('visible');
+        elementToToggle1.classList.add('hidden');
+      }
+    };
+
+    // Function to update the scroll top value
+    function updateScrollValue() {
+      scrollValueElement.textContent = window.pageYOffset;
+    }
+  </script>
+  <h5 class = 'new'>new</h5>
+
+.new{
+display: inline;
+padding: 5px 10px;
+background-color: lightgreen;
+border-radius: 10px;
+font-size: 14px;
+}
+</body>
+</html>
+<h1 class="pricing">₹1999</h1>₹999<span class="yearly">/yr</span>

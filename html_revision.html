@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            .new-button{
+                background-color: aqua;
+                height: 200px;
+                width: 500px;
+                border: none;
+                border-radius: 50px;
+                font-size: 50px;
+            }
+            .new-button:hover{
+                background-color: white;
+                border-color: aqua;
+                height: 200px;
+                width: 500px;
+                border: 50px;
+                border-radius: 50px;
+                font-size: 50px;
+                outline-style: solid;
+            }
+            .new-button:active{
+                background-color: white;
+                outline-color: aqua;
+                outline-width: 50px;
+                height: 200px;
+                width: 500px;
+                border: 50px;
+                border-radius: 50px;
+                font-size: 50px;
+                outline-style: solid;
+            }
+        </style>
+        <script type="text/javascript">
+            function msg(){
+            alert("Hello Javapoint");
+            }
+        </script>
+    </head>
+    <body>
+        <button class = "new-button">
+            YOUTUBE
+        </button>
+        <p>Welcome to Javascript</p>
+        <form>
+            <input type="button" value="click" onclick="msg()"/>
+        </form>
+    </body>
+</html>
